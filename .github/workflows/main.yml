@@ -75,7 +75,7 @@ jobs:
         echo $HELM_BASE
         cd mspaymentservice
         echo "CHART_DIR=$(pwd)" >> $GITHUB_ENV
-        sed -i 's/payment_.*/'$IMAGE_TAG'"/g' values.yaml 
+        sed -i 's/mspayimg_.*/'$IMAGE_TAG'"/g' values.yaml 
         grep tag values.yaml
         cd ../
         git add .
